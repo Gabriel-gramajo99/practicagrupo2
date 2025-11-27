@@ -3,22 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza&Passione</title>
+    <title>Pizza&Passione - Pizzería Italiana Auténtica</title>
     <link rel="stylesheet" href="/css/style.css">
     <meta name="name" content="Pizza&Passione">
-    <meta name="description" content="Pagina sobre pizzeria tipo italiana">
-    <meta name="keywors" content="pizzeria, pizza, comida italiana, restaurante, gastronomia">
+    <meta name="description" content="Página de pizzería tipo italiana con catálogo y contacto.">
+    <meta name="keywords" content="pizzería, pizza, comida italiana, restaurante, gastronomía, mozzarella, pepperoni, napoletana">
     <meta name="author" content="Grupo2">
 </head>
 <body>
-    <header>
-
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="/assets/img/Gen4 logo with title Pizza & passione with bckground something related o pizza restaur a-2, 21248171.png" alt="Logo Pizza & Passione">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#catalogo"> Menú</a></li>
+                <li><a href="#contacto"> Contacto</a></li>
+                <li><a href="#nosotros"> Nosotros</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
 
+    <section class="hero-image">
+        <div class="hero-content">
+            <h1>¡La Verdadera Pasión Italiana!</h1>
+            <p>Desde 1985 cocinando las pizzas más auténticas.</p>
+            <a href="#catalogo" class="btn-menu">Ver Nuestro Menú</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <h2 id="catalogo">Nuestras Pizzas Clásicas</h2>
+        <p class="slogan">Tradición y pasión en cada porción.</p>
+        
+        <section class="catalogo-grid">
+            <article class="pizza-card">
+                <figure>
+                    <img src="/assets/img/muzza.png" alt="Pizza Muzza Clásica">
+                    <figcaption>
+                        <h3>Muzza </h3>
+                        <p class="description">La base de toda la tradición. Salsa de tomate casera y abundante mozzarella fresca.</p>
+                        <p class="price">$12.000</p>
+                        <button>Pedir ahora</button>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="pizza-card">
+                <figure>
+                    <img src="/assets/img/peperoni.png" alt="Pizza Pepperoni">
+                    <figcaption>
+                        <h3>Pepperoni </h3>
+                        <p class="description">La favorita picante. Mozzarella, salsa y rebanadas generosas de pepperoni.</p>
+                        <p class="price">$15.500</p>
+                        <button>Pedir ahora</button>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="pizza-card">
+                <figure>
+                    <img src="/assets/img/napoleta.jpeg" alt="Pizza Napoletana con Tomate y Ajo">
+                    <figcaption>
+                        <h3>Napoletana </h3>
+                        <p class="description">El sabor del sur de Italia. Salsa, mozzarella, rodajas de tomate fresco y ajo.</p>
+                        <p class="price">$13.500</p>
+                        <button>Pedir ahora</button>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="pizza-card">
+                <figure>
+                    <img src="/assets/img/fugazeta.png" alt="Pizza Fugazzeta con Cebolla">
+                    <figcaption>
+                        <h3>Fugazzeta </h3>
+                        <p class="description">Sin salsa, doble capa de cebolla caramelizada y muchísimo queso. ¡Una delicia!</p>
+                        <p class="price">$14.800</p>
+                        <button>Pedir ahora</button>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="pizza-card">
+                <figure>
+                    <img src="/assets/img/prosciutto.jpeg" alt="Pizza Prosciutto y Rúcula">
+                    <figcaption>
+                        <h3>Prosciutto </h3>
+                        <p class="description">Una pizza gourmet. Mozzarella, jamón curado (Prosciutto) y un toque de rúcula fresca.</p>
+                        <p class="price">$17.000</p>
+                        <button>Pedir ahora</button>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
     </main>
-    <footer>
 
+    <footer class="main-footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ubicación</h4>
+                <p>Muñecas 250,San Miguel de Tucuman</p>
+                <p>Abierto de 19:00 a 00:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p> Tel: (381) 5555-555</p>
+                <p> Email: contacto@pizzapassione.com</p>
+            </div>
+            <div class="footer-section social">
+                <h4>Síguenos</h4>
+                <p>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pizza&Passione. Todos los derechos reservados. | Desarrollado por Grupo2</p>
+        </div>
     </footer>
 </body>
 </html>

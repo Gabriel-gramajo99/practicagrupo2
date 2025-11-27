@@ -1,0 +1,304 @@
+/* 1. Reset Básico y Variables (Mantenido) */
+:root {
+    --color-principal: #cc3333; /* Rojo (Tomate) */
+    --color-secundario: #ffcc00; /* Amarillo (Queso/Horno) */
+    --color-fondo: #f8f8f8;
+    --color-texto: #333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* 2. HEADER y NAVEGACIÓN (Mantenido) */
+.main-header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-principal);
+}
+
+.logo-container img {
+    max-height: 80px; /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--color-secundario);
+}
+
+/* 3. IMAGEN DE PORTADA GRANDE (NUEVO) */
+.hero-image {
+    /* **IMPORTANTE: Cambia 'portada_pizza_grande.jpg' a tu imagen de portada** */
+    background: url('/assets/img//Gen4 logo with title Pizza & passione with bckground something related o pizza restaur a-2, 21248171.png') no-repeat center center/cover;
+    height: 450px; /* Gran altura para el efecto de portada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image::before {
+    /* Overlay semi-transparente para que el texto resalte */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen un 50% */
+}
+
+.hero-content {
+    z-index: 10; /* Asegura que el contenido esté sobre el overlay */
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin: 0 0 10px 0;
+    color: white; /* Sobreescribimos el color de h1 para que se vea sobre el fondo oscuro */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-menu {
+    display: inline-block;
+    background-color: var(--color-secundario); /* Botón Amarillo */
+    color: var(--color-principal); /* Texto Rojo */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: #ffb700;
+}
+
+/* 4. CONTENIDO PRINCIPAL Y TÍTULOS (Mantenido) */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ... (El resto del CSS del catálogo y footer sigue sin cambios) ... */
+
+h2 {
+    text-align: center;
+    color: var(--color-principal);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* 4. CATÁLOGO GRID (Mantenido) */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pizza-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pizza-card figure {
+    margin: 0;
+    padding: 0;
+}
+
+.pizza-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.pizza-card figcaption {
+    padding: 15px;
+}
+
+.pizza-card h3 {
+    color: var(--color-texto);
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.95em;
+    min-height: 40px;
+}
+
+.price {
+    font-size: 1.4em;
+    color: #008000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.pizza-card button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.pizza-card button:hover {
+    background-color: #a82a2a;
+}
+
+/* 5. FOOTER (Mantenido) */
+.main-footer {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 30px 20px 10px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.footer-section {
+    padding: 15px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    font-size: 0.85em;
+}
+
+/* 6. Adaptación Móvil (Responsive Design) */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .main-nav li {
+        margin: 0 10px;
+    }
+    
+    .hero-image {
+        height: 300px; /* Menor altura en móvil */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+    
+    .footer-section:last-child {
+        border-bottom: none;
+    }
+}
