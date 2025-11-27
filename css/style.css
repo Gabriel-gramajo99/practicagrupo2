@@ -1,7 +1,7 @@
-/* 1. Reset Básico y Variables (Mantenido) */
+
 :root {
-    --color-principal: #cc3333; /* Rojo (Tomate) */
-    --color-secundario: #ffcc00; /* Amarillo (Queso/Horno) */
+    --color-principal: #cc3333; 
+    --color-secundario: #ffcc00; 
     --color-fondo: #f8f8f8;
     --color-texto: #333;
 }
@@ -14,7 +14,7 @@ body {
     color: var(--color-texto);
 }
 
-/* 2. HEADER y NAVEGACIÓN (Mantenido) */
+
 .main-header {
     background-color: #ffffff;
     padding: 10px 20px;
@@ -25,7 +25,7 @@ body {
 }
 
 .logo-container img {
-    max-height: 80px; /* Ajusta el tamaño del logo */
+    max-height: 80px;
     width: auto;
 }
 
@@ -53,11 +53,11 @@ body {
     color: var(--color-secundario);
 }
 
-/* 3. IMAGEN DE PORTADA GRANDE (NUEVO) */
+
 .hero-image {
-    /* **IMPORTANTE: Cambia 'portada_pizza_grande.jpg' a tu imagen de portada** */
+    
     background: url('/assets/img//Gen4 logo with title Pizza & passione with bckground something related o pizza restaur a-2, 21248171.png') no-repeat center center/cover;
-    height: 450px; /* Gran altura para el efecto de portada */
+    height: 450px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,18 +67,18 @@ body {
 }
 
 .hero-image::before {
-    /* Overlay semi-transparente para que el texto resalte */
+    
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen un 50% */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .hero-content {
-    z-index: 10; /* Asegura que el contenido esté sobre el overlay */
+    z-index: 10; 
     color: white;
     padding: 20px;
 }
@@ -86,7 +86,7 @@ body {
 .hero-content h1 {
     font-size: 4em;
     margin: 0 0 10px 0;
-    color: white; /* Sobreescribimos el color de h1 para que se vea sobre el fondo oscuro */
+    color: white; 
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
 }
 
@@ -99,8 +99,8 @@ body {
 
 .btn-menu {
     display: inline-block;
-    background-color: var(--color-secundario); /* Botón Amarillo */
-    color: var(--color-principal); /* Texto Rojo */
+    background-color: var(--color-secundario); 
+    color: var(--color-principal);
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
@@ -113,13 +113,13 @@ body {
     background-color: #ffb700;
 }
 
-/* 4. CONTENIDO PRINCIPAL Y TÍTULOS (Mantenido) */
+
 .main-content {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
-/* ... (El resto del CSS del catálogo y footer sigue sin cambios) ... */
+
 
 h2 {
     text-align: center;
@@ -135,7 +135,7 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* 4. CATÁLOGO GRID (Mantenido) */
+
 .catalogo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -209,7 +209,7 @@ h2 {
     background-color: #a82a2a;
 }
 
-/* 5. FOOTER (Mantenido) */
+
 .main-footer {
     background-color: var(--color-principal);
     color: white;
@@ -255,7 +255,7 @@ h2 {
     font-size: 0.85em;
 }
 
-/* 6. Adaptación Móvil (Responsive Design) */
+
 @media (max-width: 768px) {
     .main-header {
         flex-direction: column;
@@ -272,7 +272,7 @@ h2 {
     }
     
     .hero-image {
-        height: 300px; /* Menor altura en móvil */
+        height: 300px; 
     }
 
     .hero-content h1 {
